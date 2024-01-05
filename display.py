@@ -1,0 +1,22 @@
+def display_costs(data):
+    print(data)
+
+    print("=====")
+    print(f"COSTS\t\t\t\t\t\t\t{data['total-cost-to-host']}")
+    print("=====")
+    print()
+    print(f"Service charge:\t\t\t\t\t{data['service_cost']}")
+    print(f"Total opportunity cost:\t\t\t{data['total-opp-cost']}")
+    for key, value in data['rooms'].items():
+        print(f"\t\t\t{key}:\t{value}")
+    print(f"Daily mortgage:\t\t\t\t\t{data['mortgage_per_day']}")
+    print(f"TOTAL COST:\t\t\t\t\t\t{data['total-cost-to-host']}")
+    print(f"Cost per day:\t\t\t\t\t{data['total-cost-to-host'] / data['Nights']}")
+    print()
+    print("=====")
+    print(f"REVENUE\t\t\t\t\t\t\t{data['revenue']}\t\t\t({data['Nights']} nights * ${data['nightly-price']})")
+    print("=====")
+    print()
+    print("=====")
+    print(f"PROFIT\t\t\t\t\t\t\t{data['profit']}")
+    print("=====")
